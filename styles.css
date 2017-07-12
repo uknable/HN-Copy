@@ -1,0 +1,136 @@
+a {
+  color: black;
+  text-decoration: none;
+}
+body {
+  margin: auto;
+  width: 82.5%;
+  font-family: Verdana, Geneva, sans-serif;
+  counter-reset: thread-number;
+  font-size: 20px;
+  padding: 12px 0;
+}
+.header-logo {
+  width: 32px;
+  border: 1px solid white;
+  margin: 3px 3px 0 3px;
+}
+.main-header {
+  background: #ff6600;
+}
+.header-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-links-container{
+  flex: 1 1 auto;
+  display: flex;
+}
+.nav-item-container {
+  flex: 1 1 auto;
+  display: flex;
+}
+.title-nav {
+  display: block;
+  padding-right: 0.3em;
+  font-weight: bold;
+  color: #000000;
+}
+.header-nav-item+.header-nav-item {
+  padding: 0 0.3em;
+}
+.login-nav {
+  margin-left: auto;
+  padding-right: 1em;
+}
+.main-content {
+  border-bottom: 2px solid orange;
+  background-color: #f6f6ef;
+}
+.thread-item-container {
+  display: flex;
+  list-style-type: decimal;
+  padding: 10px 0;
+}
+.thread-counter-container {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 1 1.6em; 
+}
+.thread-counter::before {
+  counter-increment: thread-number;
+  content: counter(thread-number) ".";
+}
+.thread-counter {
+  color: #828282;
+}
+.upvote-arrow {
+  width: 150%;
+}
+.thread-list {
+  margin: auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+.thread-footer-container {
+  color: #828282;
+  padding: 0 10px;
+  font-size: 16px;
+}
+.thread-footer-container a {
+  color: #828282;
+}
+.thread-text-container {
+  display: flex;
+  flex-direction: column;
+}
+.thread-heading-container {
+  padding: 0 10px;
+}
+.thread-sitetail {
+  color: #828282;
+  font-size: 16px;
+  align-self: flex-end;
+  padding-left: 5px;
+}
+.thread-sitetail a {
+  color: #828282;
+}
+.more-link {
+  padding-left: 7%;
+  color: #828282;
+}
+footer {
+  background-color: #f6f6ef;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.footer-nav {
+  margin: auto;
+  padding: 20px 0;
+}
+.footer-nav-item {
+  font-size: 16px;
+}
+.footer-search {
+  margin: auto;
+  padding-bottom: 20px;
+  color: #828282;
+}
+@media (max-width: 1000px) {
+  body {
+    width: 100%;
+    padding: 0;
+  }
+  .nav-links-container {
+    flex-direction: column;
+    align-content: center;
+    padding: 10px;
+  }
+  .nav-item-container {
+    flex-wrap: wrap;
+  }
+}
